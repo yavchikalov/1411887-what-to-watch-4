@@ -13,6 +13,11 @@ module.exports = {
     inline: true,
     port: 8080
   },
+  resolve: {
+    alias: {
+      components: path.join(__dirname, `src/components`)
+    }
+  },
   module: {
     rules: [
       {
