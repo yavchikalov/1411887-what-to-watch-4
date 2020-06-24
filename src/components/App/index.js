@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Main from './Main';
+import Main from 'components/Main';
 
 export default function App(props) {
   return (

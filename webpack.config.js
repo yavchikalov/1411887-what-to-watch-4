@@ -11,7 +11,7 @@ module.exports = {
     contentBase: pathToPublic,
     open: false,
     inline: true,
-    port: 8080
+    // port: 8080
   },
   resolve: {
     alias: {

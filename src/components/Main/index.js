@@ -12,7 +12,7 @@ export default function Main(props) {
         <h1 className="visually-hidden">WTW</h1>
 
         <header className="page-header movie-card__head">
-          <div className="logo">
+          <div className="logo" onClick={props.handleClickLogo}>
             <a className="logo__link">
               <span className="logo__letter logo__letter--1">W</span>
               <span className="logo__letter logo__letter--2">T</span>
@@ -132,9 +132,14 @@ export default function Main(props) {
   );
 }
 
+Main.defaultProp = {
+  handleClickLogo: () => {}
+};
+
 Main.propTypes = {
   name: PropTypes.string.isRequired,
   genre: PropTypes.string.isRequired,
   year: PropTypes.string.isRequired,
-  movies: PropTypes.arrayOf(PropTypes.string).isRequired
+  movies: PropTypes.arrayOf(PropTypes.string).isRequired,
+  handleClickLogo: PropTypes.func
 };
