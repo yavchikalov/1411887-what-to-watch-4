@@ -12,9 +12,10 @@ const name = `The Grand Budapest Hotel`;
 const genre = `Drama`;
 const year = `2014`;
 
+const handleClickLogo = jest.fn();
+
 describe(`e2e Main component`, () => {
   it(`head should be called`, () => {
-    const handleClickLogo = jest.fn();
 
     const appScreen = shallow(
         <Main
@@ -22,7 +23,7 @@ describe(`e2e Main component`, () => {
           genre={genre}
           year={year}
           movies={movies}
-          handleClickLogo={handleClickLogo}
+          onClickLogo={handleClickLogo}
         />
     );
 
