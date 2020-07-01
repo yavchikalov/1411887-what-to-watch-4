@@ -29,6 +29,11 @@ describe(`e2e Main component`, () => {
 
     firstMovie.simulate(`mouseover`, {preventDefault() {}});
 
+    const instancesKeys = Object.keys(handleMouseover.mock.instances[0]);
+
     expect(handleMouseover).toHaveBeenCalledTimes(1);
+    expect(instancesKeys).toContain(`name`);
+    expect(instancesKeys).toContain(`cover`);
+
   });
 });
