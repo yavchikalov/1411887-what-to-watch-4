@@ -15,7 +15,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      components: path.join(__dirname, `src/components`)
+      components: path.join(__dirname, `src/components`),
+      mocks: path.join(__dirname, `src/mocks`)
     }
   },
   module: {

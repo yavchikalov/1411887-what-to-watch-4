@@ -1,5 +1,5 @@
 import React from 'react';
-import App from './';
+import ListMovies from './';
 import renderer from 'react-test-renderer';
 
 const movies = [
@@ -16,17 +16,11 @@ const movies = [
     cover: `img/macbeth.jpg`
   }
 ];
-const name = `The Grand Budapest Hotel`;
-const genre = `Drama`;
-const year = `2014`;
 
-describe(`Main`, () => {
-  it(`snapshot Main`, () => {
+describe(`ListMovies`, () => {
+  it(`snapshot ListMovies`, () => {
     const tree = renderer.create(
-        <App
-          name={name}
-          genre={genre}
-          year={year}
+        <ListMovies
           movies={movies}
         />
     ).toJSON();

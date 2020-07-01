@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ListMovies from 'components/ListMovies';
 
 export default function Main(props) {
   return (
@@ -97,16 +98,9 @@ export default function Main(props) {
           </ul>
 
           <div className="catalog__movies-list">
-            { props.movies.map((name, key) => (
-              <article key={key} className="small-movie-card catalog__movies-card">
-                <div className="small-movie-card__image">
-                  <img src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg" alt={name} width="280" height="175" />
-                </div>
-                <h3 className="small-movie-card__title">
-                  <a className="small-movie-card__link" href="movie-page.html">{ name }</a>
-                </h3>
-              </article>
-            )) }
+            <ListMovies
+              movies={props.movies}
+            />
           </div>
 
           <div className="catalog__more">
@@ -140,6 +134,9 @@ Main.propTypes = {
   name: PropTypes.string.isRequired,
   genre: PropTypes.string.isRequired,
   year: PropTypes.string.isRequired,
-  movies: PropTypes.arrayOf(PropTypes.string).isRequired,
-  onClickLogo: PropTypes.func
+  onClickLogo: PropTypes.func,
+  movies: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    cover: PropTypes.string.isRequired
+  })).isRequired
 };

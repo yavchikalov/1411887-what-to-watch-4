@@ -1,0 +1,34 @@
+import React from 'react';
+import Enzyme, {shallow} from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+import SmallMovieCard from './';
+
+Enzyme.configure({
+  adapter: new Adapter()
+});
+
+const movie = {
+  name: `Fantastic Beasts`,
+  cover: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`
+};
+
+const handleMouseover = jest.fn();
+
+describe(`e2e Main component`, () => {
+  it(`head should be called`, () => {
+
+    const smallMovieCardScreen = shallow(
+        <SmallMovieCard
+          name={movie.name}
+          cover={movie.cover}
+          onMouseover={handleMouseover}
+        />
+    );
+
+    const firstMovie = smallMovieCardScreen.find(`.small-movie-card`).first();
+
+    firstMovie.simulate(`mouseover`, {preventDefault() {}});
+
+    expect(handleMouseover).toHaveBeenCalledTimes(1);
+  });
+});
