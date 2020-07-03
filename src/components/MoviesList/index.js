@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SmallMovieCard from 'components/SmallMovieCard';
+import {SmallMovieCard} from 'components/SmallMovieCard';
 
-export default class ListMovies extends React.PureComponent {
+export class MoviesList extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -42,7 +42,7 @@ export default class ListMovies extends React.PureComponent {
   }
 }
 
-ListMovies.propTypes = {
+MoviesList.propTypes = {
   movies: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
     cover: PropTypes.string.isRequired

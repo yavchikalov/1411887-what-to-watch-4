@@ -1,5 +1,5 @@
 import React from 'react';
-import ListMovies from './';
+import {MoviesList} from './';
 import renderer from 'react-test-renderer';
 
 const movies = [
@@ -17,10 +17,10 @@ const movies = [
   }
 ];
 
-describe(`ListMovies`, () => {
-  it(`snapshot ListMovies`, () => {
+describe(`MoviesList`, () => {
+  it(`snapshot MoviesList`, () => {
     const tree = renderer.create(
-        <ListMovies
+        <MoviesList
           movies={movies}
         />
     ).toJSON();

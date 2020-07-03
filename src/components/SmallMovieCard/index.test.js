@@ -1,5 +1,5 @@
 import React from 'react';
-import SmallMovieCard from './';
+import {SmallMovieCard} from './';
 import renderer from 'react-test-renderer';
 
 const movie = {

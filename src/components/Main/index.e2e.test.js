@@ -25,7 +25,7 @@ const name = `The Grand Budapest Hotel`;
 const genre = `Drama`;
 const year = `2014`;
 
-const handleClickLogo = jest.fn();
+const handleLogoClick = jest.fn();
 
 describe(`e2e Main component`, () => {
   it(`head should be called`, () => {
@@ -36,7 +36,7 @@ describe(`e2e Main component`, () => {
           genre={genre}
           year={year}
           movies={movies}
-          onClickLogo={handleClickLogo}
+          onLogoClick={handleLogoClick}
         />
     );
 
@@ -44,6 +44,6 @@ describe(`e2e Main component`, () => {
 
     logo.simulate(`click`, {preventDefault() {}});
 
-    expect(handleClickLogo).toHaveBeenCalledTimes(1);
+    expect(handleLogoClick).toHaveBeenCalledTimes(1);
   });
 });

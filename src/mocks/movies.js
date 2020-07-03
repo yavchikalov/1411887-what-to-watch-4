@@ -1,4 +1,4 @@
-export default [
+export const movies = [
   {
     name: `The Grand Budapest Hotel`,
     cover: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`

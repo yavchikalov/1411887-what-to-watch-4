@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ListMovies snapshot ListMovies 1`] = `
+exports[`MoviesList snapshot MoviesList 1`] = `
 Array [
   <article
     className="small-movie-card catalog__movies-card"

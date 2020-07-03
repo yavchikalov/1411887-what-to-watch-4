@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ListMovies from 'components/ListMovies';
+import {MoviesList} from 'components/MoviesList';
 
 export default function Main(props) {
   return (
@@ -13,7 +13,7 @@ export default function Main(props) {
         <h1 className="visually-hidden">WTW</h1>
 
         <header className="page-header movie-card__head">
-          <div className="logo" onClick={props.onClickLogo}>
+          <div className="logo" onClick={props.onLogoClick}>
             <a className="logo__link">
               <span className="logo__letter logo__letter--1">W</span>
               <span className="logo__letter logo__letter--2">T</span>
@@ -35,10 +35,10 @@ export default function Main(props) {
             </div>
 
             <div className="movie-card__desc">
-              <h2 className="movie-card__title">{ props.name }</h2>
+              <h2 className="movie-card__title">{props.name}</h2>
               <p className="movie-card__meta">
-                <span className="movie-card__genre">{ props.genre }</span>
-                <span className="movie-card__year">{ props.year }</span>
+                <span className="movie-card__genre">{props.genre}</span>
+                <span className="movie-card__year">{props.year}</span>
               </p>
 
               <div className="movie-card__buttons">
@@ -98,7 +98,7 @@ export default function Main(props) {
           </ul>
 
           <div className="catalog__movies-list">
-            <ListMovies
+            <MoviesList
               movies={props.movies}
             />
           </div>
@@ -127,14 +127,14 @@ export default function Main(props) {
 }
 
 Main.defaultProp = {
-  onClickLogo: () => {}
+  onLogoClick: () => {}
 };
 
 Main.propTypes = {
   name: PropTypes.string.isRequired,
   genre: PropTypes.string.isRequired,
   year: PropTypes.string.isRequired,
-  onClickLogo: PropTypes.func,
+  onLogoClick: PropTypes.func,
   movies: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
     cover: PropTypes.string.isRequired

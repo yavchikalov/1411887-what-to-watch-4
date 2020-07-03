@@ -1,7 +1,7 @@
 import React from 'react';
 import Enzyme, {shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import SmallMovieCard from './';
+import {SmallMovieCard} from './';
 
 Enzyme.configure({
   adapter: new Adapter()
@@ -14,8 +14,8 @@ const movie = {
 
 const handleMouseover = jest.fn();
 
-describe(`e2e Main component`, () => {
-  it(`head should be called`, () => {
+describe(`e2e SmallMovieCard component`, () => {
+  it(`Проверяем отработку обработчика наведения на карточку и входящих данных в метод`, () => {
 
     const smallMovieCardScreen = shallow(
         <SmallMovieCard
