@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from 'components/App';
-
-const movies = [`Fantastic Beasts`, `Bohemian Rhapsody`, `Macbeth`];
+import {movies} from 'mocks/movies';
 
 ReactDOM.render(
     <App
