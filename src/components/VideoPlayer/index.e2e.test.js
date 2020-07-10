@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from 'react';
 import Enzyme, {shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
@@ -24,7 +23,7 @@ describe(`e2e VideoPlayer component`, () => {
     );
 
     expect(videoPlayerScreen.state().isOver).toEqual(false);
-    videoPlayerScreen.simulate('mouseover');
+    videoPlayerScreen.simulate(`mouseover`);
     expect(videoPlayerScreen.state().isOver).toEqual(true);
   });
-})
+});
