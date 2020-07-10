@@ -1,5 +1,5 @@
 import React from 'react';
-import Enzyme, {shallow} from 'enzyme';
+import Enzyme, {mount} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import {SmallMovieCard} from './';
 
@@ -9,7 +9,8 @@ Enzyme.configure({
 
 const movie = {
   name: `Fantastic Beasts`,
-  cover: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`
+  cover: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`,
+  trailer: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
 };
 
 const handleMouseover = jest.fn();
@@ -17,10 +18,11 @@ const handleMouseover = jest.fn();
 describe(`e2e SmallMovieCard component`, () => {
   it(`Проверяем отработку обработчика наведения на карточку и входящих данных в метод`, () => {
 
-    const smallMovieCardScreen = shallow(
+    const smallMovieCardScreen = mount(
         <SmallMovieCard
           name={movie.name}
           cover={movie.cover}
+          trailer={movie.trailer}
           onMouseover={handleMouseover}
         />
     );

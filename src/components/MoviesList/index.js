@@ -28,11 +28,12 @@ export class MoviesList extends React.PureComponent {
   render() {
     return (
       <>
-        { this.state.movies.map(({name, cover}, key) => (
+        { this.state.movies.map(({name, cover, trailer}, key) => (
           <SmallMovieCard
             key={key}
             name={name}
             cover={cover}
+            trailer={trailer}
             onMouseover={this.handleMouseover}
             onMouseout={this.handleMouseout}
           />

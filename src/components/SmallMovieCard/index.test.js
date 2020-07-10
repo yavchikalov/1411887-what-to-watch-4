@@ -4,7 +4,8 @@ import renderer from 'react-test-renderer';
 
 const movie = {
   name: `Fantastic Beasts`,
-  cover: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`
+  cover: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`,
+  trailer: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
 };
 
 describe(`SmallMovieCard`, () => {
@@ -13,6 +14,7 @@ describe(`SmallMovieCard`, () => {
         <SmallMovieCard
           name={movie.name}
           cover={movie.cover}
+          trailer={movie.trailer}
         />
     ).toJSON();
 

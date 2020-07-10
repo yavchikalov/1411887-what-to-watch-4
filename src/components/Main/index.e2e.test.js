@@ -10,15 +10,18 @@ Enzyme.configure({
 const movies = [
   {
     name: `Fantastic Beasts`,
-    cover: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`
+    cover: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`,
+    trailer: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
   },
   {
     name: `Bohemian Rhapsody`,
-    cover: `img/bohemian-rhapsody.jpg`
+    cover: `img/bohemian-rhapsody.jpg`,
+    trailer: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
   },
   {
     name: `Macbeth`,
-    cover: `img/macbeth.jpg`
+    cover: `img/macbeth.jpg`,
+    trailer: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
   }
 ];
 const name = `The Grand Budapest Hotel`;
